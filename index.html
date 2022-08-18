@@ -16,7 +16,9 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
         integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap: v4  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -24,7 +26,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="myBody">
     <!-- Top header  -->
     <section class="top__header">
         <div class="container-fluid">
@@ -64,8 +66,77 @@
     <!-- end Top header  -->
 
     <!-- Header  -->
-    <header id="site-header" class="fix__top">
-        <div class="container-fluid"></div>
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="./images/logo.png" alt="" class="mr-1" /><span> Studious</span></a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages <span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./index.html">Blog Posts</a>
+                                <a class="dropdown-item" href="./index.html">Blog Single</a>
+                                <a class="dropdown-item" href="./index.html">404 Page</a>
+                                <a class="dropdown-item" href="./index.html">Email Template</a>
+                                <a class="dropdown-item" href="./index.html">Landing Page</a>
+                                <a class="dropdown-item" href="./index.html">Shortcodes</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Contact Us</a>
+                        </li>
+                        <!-- search button -->
+                        <div class="search-right ml-lg-3">
+                            <form cls action="error.html" method="GET" class="search-box position-relative">
+                                <div class="input-search">
+                                    <input type="search" placeholder="Enter Keyword" name="search" required="required"
+                                        autofocus="" class="search-popup">
+                                </div>
+                                <button type="submit" class="btn search-btn"><i class="fa fa-search"
+                                        aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!-- //search button -->
+                    </ul>
+                </div>
+
+                <!-- toggle switch for light and dark theme -->
+                <div class="wrapper">
+                    <div class="switch">
+                        <button class="btn" id="switchButton" title="Click to switch theme">
+                            <i class="fa fa-moon"></i>
+                            <i class="fa fa-sun"></i>
+                        </button>
+
+                    </div>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
     </header>
     <!-- end header  -->
 
@@ -159,7 +230,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-
+    <!-- JS sun and mun  -->
+    <script src="./js/moon.js"></script>
+    
 </body>
 
 </html>
