@@ -164,6 +164,12 @@ nav ul li {
 .navbar-expand-lg .navbar-nav .nav-item.active .nav-link, .navbar-expand-lg .navbar-nav .nav-link:hover {
     color: #ff6e65;
 }
+.navbar-nav .nav-link:focus {
+    color: #ff6e65;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ff6e65;
+}
 .navbar-expand-lg .navbar-nav .nav-item {
     padding: 0 12px;
     transition: all 0.5s ease;
@@ -213,7 +219,14 @@ button.search-btn {
 button.search-btn:hover {
     color: #ff6e65;
 }
-
+header.nav-fixed {
+    padding: 0px;
+    border-bottom: none;
+    z-index: 999 !important;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 5%);
+    height: 70px;
+}
 
 /* sun and moon  */
 
@@ -277,7 +290,11 @@ button.search-btn:hover {
 header {
     background: #fff;
 }
-
+.noscroll {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
 @media screen and (max-width: 991px) {
     .wrapper{
         position: absolute;
@@ -420,4 +437,56 @@ transition: all 0.3s ease-in-out;
 }
 /*end carousel  */
 
-
+/* service  */
+.row{
+    margin-right: -20px;
+    margin-left: -20px;
+}
+.bot__carousel{
+    position: relative;
+    margin-top: -4em;
+}
+.bot__carousel .zone__tab{
+    padding: 50px 35px;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.bot__carousel .tab_color-1{
+    background-color: #037ef3;
+}
+.bot__carousel .tab_color-2{
+    background-color: #ffc949;
+}
+.bot__carousel .tab_color-3{
+    background-color: #ff4f81;
+}
+.bot__carousel .tab_color-4{
+    background-color: #1ee697;
+}
+.bot__carousel .zone__tab i{
+    color: white;
+    font-size: 45px;
+}
+.bot__carousel h4 a {
+    margin-top: 25px;
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+}
+.bot__carousel h4 a:hover{
+    color: #060606;
+}
+@media (max-width: 1199px){
+    .bot__carousel .zone__tab h4 a.title__carousel{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 992px){
+    .bot__carousel .zone__tab h4 a.title__carousel{
+        font-size: 25px;
+    }
+}

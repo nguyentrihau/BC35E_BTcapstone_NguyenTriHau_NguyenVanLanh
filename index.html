@@ -184,9 +184,42 @@
     <!-- end carousel  -->
 
     <!-- service  -->
-    <section>
-        <div class="service">
-            <div class="container"></div>
+    <section class="bot__carousel pb-lg-5 text-center" id="myservice">
+        <div class="container">
+            <div class="zone__grid four__tab row">
+                <div class="col-lg-3 col-md-6 px-lg-2">
+                    <div class="zone__tab tab_color-1">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Engineering & Architecture</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+                    <div class="zone__tab tab_color-2">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Learning Management</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+                    <div class="zone__tab tab_color-3">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Business & Management</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-0 mt-3">
+                    <div class="zone__tab tab_color-4">
+                        <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Artificial Intelligence</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end service  -->
@@ -285,6 +318,41 @@
             })
         });
     </script>
+<!-- js menu responsive header  -->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!-- js menu header  -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
 </body>
 
 </html>
