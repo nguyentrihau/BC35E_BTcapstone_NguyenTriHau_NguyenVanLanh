@@ -84,13 +84,13 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">About Us</a>
+                            <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Courses</a>
+                            <a class="nav-link" href="#">Courses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -107,7 +107,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Contact Us</a>
+                            <a class="nav-link" href="#">Contact Us</a>
                         </li>
                         <!-- search button -->
                         <div class="search-right ml-lg-3">
@@ -169,7 +169,7 @@
                                     <div class="info2-pic1">
                                         <h5>Studious is the best choice for everyone</h5>
                                         <button class="bnt__pic mt-sm-5 mt-4">
-                                           Know More 
+                                            Know More
                                             <i class="fa-solid fa-arrow-right ml-1"></i>
                                         </button>
                                     </div>
@@ -225,10 +225,68 @@
     <!-- end service  -->
 
     <!-- welcome -->
-    <section>
-        <div class="welcome">
-            <div class="welcome_functions">
-                <div class="container"></div>
+    <section class="welcome">
+        <div class="welcome_functions py-5">
+            <div class="container py-md-5 py-4">
+                <div class="welcome__title text-center mx-auto mb-5 pb-sm-4">
+                    <h3>Welcome to <span>Studious</span></h3>
+                </div>
+                <div class="functions row text-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-sm-0 mt-5">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-lg-0 mt-5">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -318,41 +376,41 @@
             })
         });
     </script>
-<!-- js menu responsive header  -->
-<script>
-    $(window).on("scroll", function () {
-        var scroll = $(window).scrollTop();
+    <!-- js menu   -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
 
-        if (scroll >= 80) {
-            $("#site-header").addClass("nav-fixed");
-        } else {
-            $("#site-header").removeClass("nav-fixed");
-        }
-    });
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
 
-    //Main navigation Active Class Add Remove
-    $(".navbar-toggler").on("click", function () {
-        $("header").toggleClass("active");
-    });
-    $(document).on("ready", function () {
-        if ($(window).width() > 991) {
-            $("header").removeClass("active");
-        }
-        $(window).on("resize", function () {
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
             if ($(window).width() > 991) {
                 $("header").removeClass("active");
             }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
         });
-    });
-</script>
-<!-- js menu header  -->
-<script>
-    $(function () {
-        $('.navbar-toggler').click(function () {
-            $('body').toggleClass('noscroll');
-        })
-    });
-</script>
+    </script>
+    <!-- js menu header  -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
 </body>
 
 </html>
