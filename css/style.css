@@ -6,8 +6,12 @@
 
     margin: 0;
     padding: 0;
+    
 }
-
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+}
 h1,
 h2,
 h3,
@@ -207,6 +211,9 @@ nav ul li {
     border-radius: 30px;
     border: 2px solid #eee;
 }
+.dark .navbar form.search-box input{
+    color: white;
+}
 /* truoc hover  */
 button.search-btn {
     position: absolute;
@@ -279,6 +286,9 @@ header.nav-fixed {
   }
   .dark .navbar-dark .navbar-nav .nav-link{
     color: white;
+  }
+  .dark .navbar-dark .navbar-nav .nav-link:hover{
+    color: #ff6e65;
   }
   .dark .navbar-dark .navbar-brand span{
     color: white;
@@ -477,7 +487,7 @@ transition: all 0.3s ease-in-out;
     display: block;
     color: #fff;
     font-weight: 600;
-    font-size: 21px;
+    font-size: 24px;
     line-height: 25px;
 }
 .bot__carousel h4 a:hover{
@@ -505,6 +515,9 @@ transition: all 0.3s ease-in-out;
     font-weight: 600;
     position: relative;
 }
+.dark .welcome .welcome__title h3{
+    color: white;
+}
 .welcome .welcome__title h3 span{
     color: #ff6e65;
 }
@@ -530,6 +543,13 @@ transition: all 0.3s ease-in-out;
     left: 20px;
     bottom: -15px;
 }
+.dark .welcome .welcome__title h3::before{
+    background: #b7b7b7;
+}
+.dark .welcome .welcome__title h3::after{
+    background: #b7b7b7;
+}
+
 .welcome .functions__icon i{
     color: #0d369f;
     font-size: 30px;
@@ -543,6 +563,16 @@ transition: all 0.3s ease-in-out;
     font-size: 24px;
     line-height: 34px;
     font-weight: 600;
+    color: #060606;
+}
+.welcome .functions__tab .functions__info .functions__title1:hover{
+    color: #ff6e65;
+}
+.dark .welcome .functions__tab .functions__info .functions__title1{
+    color: white;
+}
+.dark .welcome .functions__tab .functions__info .functions__title1:hover{
+    color: #ff6e65;
 }
 .welcome .functions__tab .functions__info .functions__text{
     margin-top: 15px;
@@ -550,4 +580,205 @@ transition: all 0.3s ease-in-out;
     line-height: 28px;
     color: #707070;
     letter-spacing: 0.4px;
+}
+.dark .welcome .functions__tab .functions__info .functions__text{
+    color:#a8b7aa ;
+}
+
+
+/* Course  */
+.course{
+    background: #f8f9ff;
+}
+.dark .course{
+    background-color:#161c2d ;
+}
+.course .course__title{
+    max-width: 700px;
+}
+.course .course__title h3{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    position: relative;
+}
+.course .course__title h3 span{
+    color: #ff6e65;
+}
+.dark .course .course__title h3{
+    color: white;
+}
+.course .course__title h3::before{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: -20px;
+    bottom: -8px;
+}
+.course .course__title h3::after{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: 20px;
+    bottom: -15px;
+}
+.dark .course .course__title h3::before{
+    background: #b7b7b7;
+}
+.dark .course .course__title h3::after{
+    background: #b7b7b7;
+}
+
+.course .row .course__tab__top img{
+    display: block;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+.course .row .course__tab__top .learn-list{
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+.course .row .course__tab__top .learn-list a:nth-of-type(1){
+    background-color: #FFA100;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    color: #FFFFFF !important;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 5px;
+}
+.course .row .course__tab__top .learn-list a:nth-of-type(2){
+    background: #1DC295;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    color: #FFFFFF !important;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 5px;
+}
+.course .row .course__tab__top .learn-list a:nth-of-type(3){
+    background: #037ef3;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    color: #FFFFFF !important;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 5px;
+}
+.course .row .course__tab__top .course-price-item{
+    position: absolute;
+    right: 25px;
+    bottom: -15px;
+}
+.course .row .course__tab__top .course-price-item h6{
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: #ff6e65;
+    color: #FFFFFF;
+    box-shadow: 0px 8px 20px rgb(241 77 93 / 20%);
+    min-width: 70px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.course .row .course__tab__bot{
+    padding: 20px;
+    border: 1px solid #eee;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+}
+.dark .course .row .course__tab__bot{
+    background:#161c2d ;
+    border: 1px solid rgb(255 255 255 / 20%);
+}
+.course .row .course__tab__bot .tab__bot__header li{
+    color: #060606;
+}
+.dark .course .row .course__tab__bot .tab__bot__header li span{
+    color: white;
+}
+.course .row .course__tab__bot .tab__bot__header li i{
+    color: #ff6e65;
+    font-size: inherit;
+}
+.course .row .course__tab__bot h4 a{
+    color: #060606;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    font-size: 22px;
+}
+.course .row .course__tab__bot h4 a:hover{
+    color: #ff6e65;
+}
+.dark .course .row .course__tab__bot h4 a{
+    color: white;
+}
+.dark .course .row .course__tab__bot h4 a:hover{
+    color: #ff6e65;
+}
+.course .row .course__tab__bot p{
+    color: #707070;
+}
+.dark .course .row .course__tab__bot p{
+    color: #b7b7b7;
+}
+.course .row .course__tab__bot .tab__bot__footer{
+    border-top: 1px solid #eee;
+}
+.dark .course .row .course__tab__bot .tab__bot__footer{
+    border-top: 1px solid rgb(255 255 255 / 20%);
+}
+.course .row .course__tab__bot .tab__bot__footer .rating-list li{
+    display: inline-block;
+}
+.course .row .course__tab__bot .tab__bot__footer .rating-list li a{
+    color: #ffc949;
+    font-size: 15px;
+}
+.course .row .course__tab__bot .tab__bot__footer .btn-style-primary{
+    color: #ff6e65;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+.course .row .course__tab__bot .tab__bot__footer .btn-style-primary:hover{
+    color: #0d369f;
+}
+.course .course__btn__more button{
+    background-color: #ff6e65;
+    color: #fff;
+    transition: all 0.3s ease-out;
+    padding: 14px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+}
+.course .course__btn__more button:hover{
+    background-color:#0d369f ;
+}
+.dark .course .course__btn__more button:hover{
+    background-color: #4867b0;
 }
