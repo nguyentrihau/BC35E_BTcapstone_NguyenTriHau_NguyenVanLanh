@@ -13,10 +13,12 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
         rel="stylesheet">
     <!-- font awesome  -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
-        integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel  -->
+    <link rel="stylesheet" href="./carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./carousel/owl.theme.default.min.css">
     <!-- bootstrap: v4  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -24,7 +26,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="myBody">
     <!-- Top header  -->
     <section class="top__header">
         <div class="container-fluid">
@@ -64,42 +66,532 @@
     <!-- end Top header  -->
 
     <!-- Header  -->
-    <header id="site-header" class="fix__top">
-        <div class="container-fluid"></div>
+    <header id="site-header" class="fixed-top">
+        <div class="container-fluid bg_header">
+            <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                <h1>
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="./images/logo.png" alt="" class="mr-1" /><span> Studious</span></a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages <span class="fa fa-angle-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./index.html">Blog Posts</a>
+                                <a class="dropdown-item" href="./index.html">Blog Single</a>
+                                <a class="dropdown-item" href="./index.html">404 Page</a>
+                                <a class="dropdown-item" href="./index.html">Email Template</a>
+                                <a class="dropdown-item" href="./index.html">Landing Page</a>
+                                <a class="dropdown-item" href="./index.html">Shortcodes</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <!-- search button -->
+                        <div class="search-right ml-lg-3">
+                            <form cls action="error.html" method="GET" class="search-box position-relative">
+                                <div class="input-search">
+                                    <input type="search" placeholder="Enter Keyword" name="search" required="required"
+                                        autofocus="" class="search-popup">
+                                </div>
+                                <button type="submit" class="btn search-btn"><i class="fa fa-search"
+                                        aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <!-- //search button -->
+                    </ul>
+                </div>
+
+                <!-- toggle switch for light and dark theme -->
+                <div class="wrapper">
+                    <div class="switch">
+                        <button class="btn" id="switchButton" title="Click to switch theme">
+                            <i class="fa fa-moon"></i>
+                            <i class="fa fa-sun"></i>
+                        </button>
+
+                    </div>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
     </header>
     <!-- end header  -->
 
     <!-- carousel  -->
-    <section>
+    <section class="carousel__pic" id="mycarousel">
         <div class="carousel">
-            <div class="carousel__content"></div>
+            <div class="owl-yeah owl-carousel owl-theme owl-loaded owl-drag">
+                <div class="tag">
+                    <div class="owl-tag">
+                        <div class="pic1 pic1-play">
+                            <div class="info1-pic1">
+                                <div class="container">
+                                    <div class="info2-pic1">
+                                        <h5>Master the Skills to Drive your Career</h5>
+                                        <button class="bnt__pic mt-sm-5 mt-4">
+                                            Know More
+                                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tag">
+                    <div class="owl-tag">
+                        <div class="pic1 pic1-play pic2">
+                            <div class="info1-pic1">
+                                <div class="container">
+                                    <div class="info2-pic1">
+                                        <h5>Studious is the best choice for everyone</h5>
+                                        <button class="bnt__pic mt-sm-5 mt-4">
+                                            Know More
+                                            <i class="fa-solid fa-arrow-right ml-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end carousel  -->
 
     <!-- service  -->
-    <section>
-        <div class="service">
-            <div class="container"></div>
+    <section class="bot__carousel pb-lg-5 text-center" id="myservice">
+        <div class="container">
+            <div class="zone__grid four__tab row">
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-1">
+                    <div class="zone__tab tab_color-1">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Engineering & Architecture</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-1 mt-3">
+                    <div class="zone__tab tab_color-2">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Learning Management</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-1 mt-3">
+                    <div class="zone__tab tab_color-3">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Business & Management</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 px-lg-2 mt-md-1 mt-3">
+                    <div class="zone__tab tab_color-4">
+                        <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                        <h4>
+                            <a href="#" class="title__carousel">Artificial Intelligence</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end service  -->
 
     <!-- welcome -->
-    <section>
-        <div class="welcome">
-            <div class="welcome_functions">
-                <div class="container"></div>
+    <section class="welcome">
+        <div class="welcome_functions py-5">
+            <div class="container py-md-5 py-4">
+                <div class="welcome__title text-center mx-auto mb-5 pb-sm-4">
+                    <h3>Welcome to <span>Studious</span></h3>
+                </div>
+                <div class="functions row text-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-sm-0 mt-5">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mt-lg-0 mt-5">
+                        <div class="functions__tab">
+                            <div class="functions__icon">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                            </div>
+                            <div class="functions__info mt-4">
+                                <a href="#">
+                                    <h3 class="functions__title1">
+                                        Trending Course
+                                    </h3>
+                                </a>
+                                <p class="functions__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                                    eiusmod te incididunt
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- end welcome  -->
 
+    <!-- create distance  -->
+    <div style="margin: 8px auto; display: block; text-align:center;">
+
+        <!---728x90--->
+        
+    </div>
+    <!--end create distance  -->
+
     <!-- course -->
-    <div class="course">
-        <div class="container"></div>
+    <div class="course py-5">
+        <div class="container py-md-5 py-4">
+            <div class="course__title text-center mx-auto mb-5 pb-sm-4">
+                <h3>Pick a Course to <span>Get Started</span></h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c1.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">art</a>
+                                <a href="#">design</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$400</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Intermediate</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">Donec sed teus enime</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c2.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">digital</a>
+                                <a href="#">learn</a>
+                                <a href="#">10% off</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$900</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Hight</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">It's enim ad minim ate</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c3.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">html</a>
+                                <a href="#">java</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$99</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Beginner</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">Ullamco laboris nisi uts</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c4.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">website</a>
+                                <a href="#">wordpress</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$369</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Intermediate</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">Donec sed teus enime</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c5.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">marketing</a>
+                                <a href="#">edu</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$499</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Hight</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">It's enim ad minim ate</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa-regular fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <div class="course__tab">
+                        <div class="course__tab__top position-relative">
+                            <img src="./images/c6.jpg" alt="img" class="img-fluid">
+                            <div class="learn-list">
+                                <a href="#">study</a>
+                                <a href="#">accadamic</a>
+                            </div>
+                            <div class="course-price-item">
+                                <h6>$289</h6>
+                            </div>
+                        </div>
+                        <div class="course__tab__bot">
+                            <div class="tab__bot__header mb-4 mt-3">
+                                <ul class="list-unstyled d-flex align-items-center justify-content-between">
+                                    <li> <i class="fa fa-signal" aria-hidden="true"></i> <span> Beginner</span> </li>
+                                    <li> <i class="fa-regular fa-clock" aria-hidden="true"></i><span> 10 week</span> </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="#">Donec sed teus enime</a>
+                            </h4>
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="tab__bot__footer d-flex align-items-center justify-content-between mt-5 pt-4">
+                                <ul class="rating-list">
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i>
+                                        </a></li>
+                                </ul>
+                                <a class="btn btn-style-primary" href="#">
+                                    Know Details
+                                    <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course__btn__more text-center mt-5">
+                <a href="#" class="mt-sm-3">
+                    <button>
+                        Browse more courses
+                        <i class="fa fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
     <!-- end course  -->
+
+    <!-- create distance  -->
+    <div style="margin: 8px auto; display: block; text-align:center;">
+
+        <!---728x90--->
+        
+    </div>
+<!--end create distance  -->
 
     <!-- learn  -->
     <section>
@@ -124,9 +616,121 @@
     <!-- end feedback  -->
 
     <!-- instructors -->
-    <section>
-        <div class="instructors">
-            <div class="container"></div>
+    <section class="instructors py-sm-5 pb-sm-0 pb-5">
+        <div class="container py-md-5 py-4">
+            <div class="instructors__title text-center mx-auto mb-5 pb-sm-4">
+                <h3>World Class <span>Instructors</span></h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="instructors__item">
+                        <div class="instructors__item__top">
+                            <a href="#">
+                                <img src="./images/team1.jpg" class="img-fluid" alt="img">
+                            </a>
+                            <div class="item__top__info">
+                                <a href="#"> </a>
+                                <div class="item__top__info__icon">
+                                    
+                                    <a href="#" ><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class=" mx-2"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" "><i class="fa-brands fa-google-plus-g"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="instructors__item__bot p-4">
+                            <h5 class="member mb-1">
+                                <a href="#">
+                                    Olive Yew
+                                </a>
+                            </h5>
+                            <small>Teaches Design</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 mt-sm-0">
+                    <div class="instructors__item">
+                        <div class="instructors__item__top">
+                            <a href="#">
+                                <img src="./images/team2.jpg" class="img-fluid" alt="img">
+                            </a>
+                            <div class="item__top__info">
+                                <a href="#"> </a>
+                                <div class="item__top__info__icon">
+                                    
+                                    <a href="#" ><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class=" mx-2"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" "><i class="fa-brands fa-google-plus-g"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="instructors__item__bot p-4">
+                            <h5 class="member mb-1">
+                                <a href="#">
+                                    Aida Joe
+                                </a>
+                            </h5>
+                            <small>UI/UX Designer</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 mt-lg-0">
+                    <div class="instructors__item">
+                        <div class="instructors__item__top">
+                            <a href="#">
+                                <img src="./images/team3.jpg" class="img-fluid" alt="img">
+                            </a>
+                            <div class="item__top__info">
+                                <a href="#"> </a>
+                                <div class="item__top__info__icon">
+                                    
+                                    <a href="#" ><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class=" mx-2"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" "><i class="fa-brands fa-google-plus-g"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="instructors__item__bot p-4">
+                            <h5 class="member mb-1">
+                                <a href="#">
+                                    Teri Dac
+                                </a>
+                            </h5>
+                            <small>Teaches Skills</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 mt-lg-0">
+                    <div class="instructors__item">
+                        <div class="instructors__item__top">
+                            <a href="#">
+                                <img src="./images/team4.jpg" class="img-fluid" alt="img">
+                            </a>
+                            <div class="item__top__info">
+                                <a href="#"> </a>
+                                <div class="item__top__info__icon">
+                                    
+                                    <a href="#" ><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#" class=" mx-2"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#" "><i class="fa-brands fa-google-plus-g"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="instructors__item__bot p-4">
+                            <h5 class="member mb-1">
+                                <a href="#">
+                                    Anton Bne
+                                </a>
+                            </h5>
+                            <small>Web Designer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- end instructors -->
@@ -159,7 +763,61 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <!-- JS sun and mun  -->
+    <script src="./js/moon.js"></script>
+    <!-- js owe carousel  -->
+    <script src="./carousel/jquery.min.js"></script>
+    <script src="./carousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                autoplay: true,
+                loop: true,
+                mouseDrag: true,
+                items: 1,
+                dots: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                dotsSpeed: 1000,
 
+            })
+        });
+    </script>
+    <!-- js menu   -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- js menu header  -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
 </body>
 
 </html>
