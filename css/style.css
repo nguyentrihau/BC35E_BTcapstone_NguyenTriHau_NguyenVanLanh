@@ -424,7 +424,11 @@ header {
 
 
 }
-
+@media (max-width: 991px){
+.fixed-top {
+    position: fixed;
+}
+};
 /* end header  */
 
 
