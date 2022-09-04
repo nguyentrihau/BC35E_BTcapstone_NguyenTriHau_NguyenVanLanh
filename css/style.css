@@ -437,7 +437,7 @@ header {
     display: grid;
     align-items: center;
     padding: 3em 0;
-    min-height: 90vh;
+    /* min-height: 90vh; */
 }
 
 .carousel__pic .pic2 {
@@ -507,10 +507,11 @@ header {
 }
 
 /* responsive  */
-@media (max-width: 992px) {
+@media (max-width: 500px) {
     .carousel__pic .info2-pic1 h5 {
         font-size: 50px;
         line-height: 60px;
+        padding-left: 3rem;
     }
 }
 
@@ -912,7 +913,6 @@ header {
 .chanel,
 .chanel__bg {
     background: url(../images/bg3.jpg) bottom / cover no-repeat;
-    background-size: 100%;
 }
 
 .chanel .fea-gd-vv h5 {
@@ -1400,7 +1400,7 @@ h3.title-style {
     color: #fff;
 }
 
-.w3l-about-2 .title-style {
+.dark .w3l-about-2 .title-style {
     color: #fff;
 }
 
@@ -1466,6 +1466,14 @@ footer {
     width: 50%;
     margin-right: -15px;
 }
+
+@media (max-width: 650px) {
+    .footer__top .footer__item__right, 
+    .footer__item__left {
+        width: 100%;
+    }
+}
+
 
 .footer__item__right input {
     padding: 15px 20px;
