@@ -11,7 +11,7 @@
 body{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
-}
+
 h1,
 h2,
 h3,
@@ -783,6 +783,332 @@ transition: all 0.3s ease-in-out;
     background-color: #4867b0;
 }
 
+/* chanel */
+.chanel, 
+.chanel__bg {
+    background: url(../images/bg3.jpg) bottom / cover no-repeat;
+    width: 100vw;
+    background-size: 100%;
+}
+
+.chanel .fea-gd-vv h5 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.chanel .feature-gd {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.chanel .icon {
+    margin-right: 1em;
+}
+
+.chanel .icon i {
+    background: #0d369f;
+    color: #0d369f;
+    font-size: 28px;
+    background: rgb(13 54 159 / 9%);
+    width: 65px;
+    height: 66px;
+    line-height: 65px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+@media (max-width: 736px) {
+    .chanel h4 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 384px) {
+    .chanel h4 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .chanel .feature-gd {
+        grid-template-columns: auto;
+    }
+}
+
+/* numbers */
+#numbers .numbers__title{
+    max-width: 700px;
+}
+#numbers .numbers__title h3{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    position: relative;
+}
+
+.dark #numbers .numbers__title h3{
+    color: #fff;
+}
+
+#numbers .numbers__title p {
+    margin-top: 30px;
+}
+
+.dark .numbers__title p {
+    color: #fff;
+}
+
+#numbers .numbers__title h3 span{
+    color:#ff6e65 ;
+}
+#numbers .numbers__title h3::before{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: -20px;
+    bottom: -8px;
+}
+#numbers .numbers__title h3::after{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: 20px;
+    bottom: -15px;
+}
+.dark .numbers .numbers__title h3::before{
+    background: #b7b7b7;
+}
+.dark .numbers .numbers__title h3::after{
+    background: #b7b7b7;
+}
+
+.dark .numbers_content {
+    color: #fff;
+}
+
+.timer {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+p.count-text {
+    text-transform: uppercase;
+}
+
+.counter {
+    border-right: 1px solid #eee;
+}
+
+@media (max-width: 991px) {
+    .timer {
+        font-size: 35px;
+    }
+
+    p.count-text {
+        font-size: 15px;
+    }
+
+    .counter {
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    p.count-text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+}
+
+.timer {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+p.count-text {
+    text-transform: uppercase;
+}
+
+.counter {
+    border-right: 1px solid #eee;
+}
+
+@media (max-width: 991px) {
+    .timer {
+        font-size: 35px;
+    }
+
+    p.count-text {
+        font-size: 15px;
+    }
+
+    .counter {
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    p.count-text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* feedback */
+.testimonials .testimonial__title h3{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    position: relative;
+}
+.dark .testimonials .testimonial__title h3{
+    color:white ;
+}
+.testimonials .testimonial__title h3 span{
+    color:#ff6e65 ;
+}
+.testimonials .testimonial__title h3::before{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: -20px;
+    bottom: -8px;
+}
+.testimonials .testimonial__title h3::after{
+    content: "";
+    background: #707070;
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    margin: auto;
+    left: 20px;
+    bottom: -15px;
+}
+.dark .testimonials .testimonial__title h3::before{
+    background: #b7b7b7;
+}
+.dark .testimonials .testimonial__title h3::after{
+    background: #b7b7b7;
+}
+
+.sub-test q::before {
+    font-size: 50px;
+    color: #ff4f81;
+    font-family: initial;
+    line-height: .8;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.testimonials_grid {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 20px 62px rgb(4 20 69 / 10%);
+    padding: 2rem;
+}
+
+.testi-img-res img {
+    border-radius: 50%;
+}
+
+p.sub-test span {
+    color: #e2e2e2;
+    font-size: 28px;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.testi_grid.text-left {
+    transform: translateY(10%);
+}
+
+.testi_grid p {
+    font-size: 13px;
+    color: var(--font-color);
+}
+
+.sub-author-con {
+    grid-template-columns: .3fr 1fr;
+    align-items: center;
+    grid-gap: 5px;
+    margin-top: 1.5em;
+    display: grid;
+}
+
+.testi_grid h5 {
+    font-weight: 600;
+    line-height: 16px;
+}
+
+@media all and (max-width: 1200px) {
+    .sub-author-con {
+        grid-template-columns: .5fr 1fr;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .sub-author-con {
+        grid-template-columns: .2fr 1fr;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sub-author-con {
+        grid-template-columns: .3fr 1fr;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .sub-author-con {
+        grid-template-columns: .5fr 1fr;
+    }
+}
+
+@media all and (max-width: 340px) {
+    .testimonials_grid {
+        padding: 2rem;
+    }
+}
+
+/* //testimonials section */
+/* about-2 section */
+h3.title-style {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+@media all and (max-width: 560px) {
+    h3.title-style {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media all and (max-width: 380px) {
+    h3.title-style {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
 
 /* instructors  */
 /* .dark .instructors{
@@ -891,5 +1217,18 @@ transition: all 0.3s ease-in-out;
 }
 .dark .instructors .instructors__item .instructors__item__bot small{
     color: white;
+}
+
+/* about */
+.btn-style-secondary {
+    background: #ff6e65;
+    color: #fff;
+    transition: 0.3s ease-out;
+    padding: 10px 25px;
+}
+
+.mt-4:hover .btn-style-secondary {
+    background: #0d369f;
+    color: #fff;
 }
 
